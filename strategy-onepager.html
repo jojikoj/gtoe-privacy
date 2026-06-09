@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>AI導入支援 3プラン戦略 ── 社内用</title>
+<style>
+  @page { size: A4 portrait; margin: 10mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+    color: #222; margin: 0 auto; padding: 8mm;
+    width: 210mm; min-height: 297mm; font-size: 10.5px; line-height: 1.45;
+  }
+  header { border-bottom: 2.5px solid #8A6A3F; padding-bottom: 4px; margin-bottom: 8px;
+    display: flex; justify-content: space-between; align-items: baseline; }
+  header h1 { color: #8A6A3F; font-size: 17px; margin: 0; }
+  header .sub { color: #888; font-size: 9px; }
+  h2 { color: #8A6A3F; font-size: 11.5px; margin: 9px 0 4px; border-left: 4px solid #8A6A3F; padding-left: 6px; }
+  .lead { background: #f7f3ec; border: 1px solid #e3d8c4; border-radius: 4px; padding: 6px 9px; margin-bottom: 4px; }
+  .lead b { color: #8A6A3F; }
+  table { width: 100%; border-collapse: collapse; margin: 2px 0; }
+  th, td { border: 1px solid #ccc; padding: 4px 5px; text-align: left; vertical-align: top; font-size: 9.5px; }
+  th { background: #8A6A3F; color: #fff; font-weight: bold; }
+  td.rowh { background: #f2ece1; font-weight: bold; color: #6a5230; white-space: nowrap; width: 70px; }
+  .premium { background: #fbf6ee; }
+  .cols { display: flex; gap: 8px; margin-top: 2px; }
+  .box { flex: 1; border: 1px solid #ddd; border-radius: 4px; padding: 6px 8px; }
+  .box h3 { color: #8A6A3F; font-size: 10.5px; margin: 0 0 4px; }
+  ul { margin: 2px 0; padding-left: 15px; }
+  li { margin-bottom: 2px; }
+  .ok { color: #2a7a3a; font-weight: bold; }
+  .ng { color: #b03030; font-weight: bold; }
+  .flow { text-align: center; background: #f7f3ec; border-radius: 4px; padding: 6px; margin-top: 8px; font-size: 10px; font-weight: bold; color: #6a5230; }
+  .flow span { color: #8A6A3F; }
+  footer { margin-top: 8px; color: #999; font-size: 8.5px; text-align: right; }
+</style>
+</head>
+<body>
+<header>
+  <h1>AI導入支援 ── 3プラン戦略</h1>
+  <div class="sub">株式会社TOE / 社内用 / 2026.06</div>
+</header>
+
+<div class="lead">
+  プランを分ける軸は2本。<b>①助言だけか / TOEが実装するか</b>、
+  <b>②Claude Codeを顧客環境に入れるか</b>(=Standard / Premium の<b>決定的な境界</b>)。
+  この一線で「データの所在・提供価値・責任範囲」が同時に切り替わる。
+  3プランは<b>フロー(売り切り)</b>、その先に<b>継続契約(ストック)</b>を置く。
+</div>
+
+<h2>3プラン全体像</h2>
+<table>
+  <tr><th style="width:70px;">　</th><th>① Light(診断・伴走)</th><th>② Standard(実装代行)</th><th class="premium">③ Premium(内製化)</th></tr>
+  <tr><td class="rowh">ひとこと</td><td>何にAIを使うか決める</td><td>TOEが作って渡す</td><td class="premium">自走する仕組みを社内に残す</td></tr>
+  <tr><td class="rowh">Claude Code</td><td>入れない</td><td>TOE側で動かす</td><td class="premium">顧客環境に入れる</td></tr>
+  <tr><td class="rowh">提供物</td><td>業務棚卸し・導入ロードマップ</td><td>動く自動化アプリ＋活用研修</td><td class="premium">環境構築＋運用設計＋構築研修</td></tr>
+  <tr><td class="rowh">価値の型</td><td>意思決定支援(フロー)</td><td>成果物(フロー)</td><td class="premium">内製能力(ストック)</td></tr>
+  <tr><td class="rowh">課金</td><td>低・スポット</td><td>中・プロジェクト</td><td class="premium">高・構築＋継続</td></tr>
+</table>
+
+<h2>Standard をどこまでやるか(設計の肝)</h2>
+<div class="cols">
+  <div class="box">
+    <h3>やる</h3>
+    <ul>
+      <li><span class="ok">✓</span> 痛い業務の自動化アプリ構築(<b>動けばいい</b>・作り込み不要)</li>
+      <li><span class="ok">✓</span> 作ったアプリの活用研修</li>
+      <li><span class="ok">✓</span> 納品後 2〜4週間のバグ修正(動作保証)</li>
+    </ul>
+  </div>
+  <div class="box">
+    <h3>やらない(＝次の発注 or Premium)</h3>
+    <ul>
+      <li><span class="ng">✕</span> 業務ロジックの変更・新機能追加</li>
+      <li><span class="ng">✕</span> 自分たちで作れるよう教える(＝Premiumの中身)</li>
+    </ul>
+    <div style="margin-top:3px; font-size:9px; color:#6a5230;">“育てたい”欲求が出た瞬間に<b>天井</b>に当たり、Premiumへ。</div>
+  </div>
+</div>
+
+<h2>補助金戦略(人材開発支援助成金)</h2>
+<div class="cols">
+  <div class="box">
+    <h3>① 請求を2本立てにする</h3>
+    <ul>
+      <li><b>構築費</b> … 対象外(顧客負担 / IT導入補助金など別枠)</li>
+      <li><b>研修費</b> … <span class="ok">助成金を乗せる</span></li>
+    </ul>
+    <div style="font-size:9px; color:#6a5230;">アプリ作りを“研修”に偽装しない。別建ての本物の研修を付ける。</div>
+  </div>
+  <div class="box">
+    <h3>② 研修を“本物のリスキリング”に</h3>
+    <ul>
+      <li>10時間以上の<b>汎用AI活用カリキュラム</b>、作ったアプリは<b>実習教材</b></li>
+      <li>操作説明はNG → 応用の効くスキルに</li>
+      <li><b>事前申請</b>必須 / 社労士と提携し事務を巻き取る</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Premium の後 ── 継続課金(ストック層)</h2>
+<div class="cols">
+  <div class="box">
+    <h3>月額顧問 / リテーナー</h3>
+    <ul>
+      <li>最新追従(AIの進化が速い＝継続価値の本命)</li>
+      <li>新部署・新業務への横展開支援(また補助金)</li>
+      <li>利用ガバナンス・コスト・品質管理</li>
+    </ul>
+  </div>
+  <div class="box">
+    <h3>鉄則</h3>
+    <ul>
+      <li><b>Premium単体で黒字</b>にする</li>
+      <li>後続(顧問)は当てにしない＝<b>取れたらボーナス</b></li>
+      <li>自立して離れる顧客は必ず出る前提で設計</li>
+    </ul>
+  </div>
+</div>
+
+<div class="flow">
+  Light(診断) → Standard(実装＋活用研修) → Premium(内製化＋構築研修) → <span>継続顧問(ストック)</span>
+</div>
+
+<footer>株式会社TOE ── 社内検討資料(2026.06)</footer>
+</body>
+</html>
